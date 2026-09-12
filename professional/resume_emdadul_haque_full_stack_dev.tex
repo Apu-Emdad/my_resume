@@ -1,0 +1,388 @@
+\documentclass[a4paper]{article}
+
+\usepackage[
+  left=25pt,
+  right=25pt,
+  top=25pt,
+  bottom=25pt
+]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{Lato}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+
+\definecolor{linkblue}{HTML}{2459A6}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkblue,
+  linkcolor=linkblue
+}
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ==========================================================
+% TYPOGRAPHY
+% ==========================================================
+
+\newcommand{\bodyfont}{%
+  \fontsize{11pt}{13pt}\selectfont
+}
+
+\newcommand{\sectionfont}{%
+  \fontsize{12pt}{14pt}\selectfont\bfseries
+}
+
+% ==========================================================
+% ALIGNMENT
+% ==========================================================
+
+% Main content starts at page margin.
+%
+% Secondary lines:
+% x = 37.125pt
+%
+% Bullet text:
+% x = 47.0156pt
+
+\newlength{\secondaryindent}
+\setlength{\secondaryindent}{10pt}
+
+\newlength{\listindent}
+\setlength{\listindent}{18.5pt}
+
+% ==========================================================
+% SECTION TITLE
+% ==========================================================
+
+\newcommand{\sectiontitle}[1]{%
+  \par
+  \vspace{14pt}
+  {\sectionfont #1}\par
+  \vspace{6pt}
+}
+
+% ==========================================================
+% BULLET
+% ==========================================================
+
+\newcommand{\resumebullet}[1]{%
+  \begingroup
+  \leftskip=\listindent
+  \parindent=0pt
+  \noindent
+  \llap{%
+    \raisebox{0.15ex}{%
+      \fontsize{7}{7}\selectfont -
+    }%
+    \hspace{6pt}%
+  }%
+  #1\par
+  \endgroup
+}
+
+% ==========================================================
+% SECONDARY INDENTED LINE
+% ==========================================================
+
+\newcommand{\secondaryline}[1]{%
+  \par
+  \begingroup
+  \leftskip=\secondaryindent
+  \noindent
+  #1\par
+  \endgroup
+}
+
+% ==========================================================
+% EXPERIENCE HEADER
+% ==========================================================
+
+\newcommand{\experienceheader}[3]{%
+  \noindent
+  \textbf{#1}, \textit{#2}%
+  \hfill
+  \mbox{#3}%
+  \par
+  \vspace{1pt}
+}
+
+% ==========================================================
+% PROJECT
+% ==========================================================
+
+\newcommand{\projecttitle}[2]{%
+  \textbf{#1}, \textit{#2}\par
+}
+
+\newcommand{\projecttech}[1]{%
+  \secondaryline{\textit{#1}}%
+}
+
+% ==========================================================
+% COURSE
+% ==========================================================
+
+\newcommand{\course}[2]{%
+  \textbf{#1 --- IBM, }\textit{Coursera}\par
+  \secondaryline{#2}%
+}
+
+% ==========================================================
+% SKILL
+% ==========================================================
+
+\newcommand{\skill}[2]{%
+  \textbf{#1} --- #2\par
+}
+
+% ==========================================================
+% DOCUMENT
+% ==========================================================
+
+\begin{document}
+
+\bodyfont
+
+% ==========================================================
+% HEADER
+% ==========================================================
+
+{\fontsize{16pt}{19.2pt}\selectfont\bfseries
+  Emdadul Haque Apu}
+\hspace{5pt}
+{\fontsize{13pt}{15.6pt}\selectfont\itshape
+  Software Engineer}
+
+\par\vspace{11pt}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lll}
+  \mbox{\faEnvelope\hspace{6pt}
+    \href{mailto:emdadulhaqueofficial4@gmail.com}
+    {emdadulhaqueofficial4@gmail.com}}
+  &
+  \mbox{\faPhone\hspace{6pt}
+    \href{tel:+8801515294350}
+    {+880151-5294350}}
+  &
+  \mbox{\faMapMarker*\hspace{6pt}Dhaka, Bangladesh}
+  \\
+  [9pt]
+  \mbox{\faLinkedin\hspace{6pt}
+    \href{https://linkedin.com/in/apu-emdad}
+    {linkedin.com/in/apu-emdad}}
+  &
+  \mbox{\faGithub\hspace{6pt}
+    \href{https://github.com/Apu-Emdad}
+    {github.com/Apu-Emdad}}
+  &
+  \mbox{\faDev\hspace{6pt}
+    \href{https://dev.to/apu_emdad}
+    {dev.to/apu\_emdad}}
+\end{tabular*}
+
+\par\vspace{16pt}
+
+% ==========================================================
+% SUMMARY
+% ==========================================================
+
+Proficient in programming, database systems, and technical problem-solving through professional software\\
+engineering experience. Eager to contribute to research projects involving data collection, literature review,\\
+experimentation, and scientific reporting.\par
+
+% ==========================================================
+% PROFESSIONAL EXPERIENCE
+% ==========================================================
+
+\sectiontitle{PROFESSIONAL EXPERIENCE}
+
+\experienceheader
+{Full Stack Developer L2}
+{Manush AI Platform LTD}
+{Aug 2025 -- Present}
+
+\resumebullet{Designed, developed, and delivered 300+ REST APIs and 50+ backend modules supporting large-scale\\
+  enterprise workflows}
+
+\resumebullet{Optimized PostgreSQL performance through indexing, query tuning, and materialized views, reducing report\\
+  generation times by up to 10x for datasets containing tens of millions of records}
+
+\resumebullet{Designed relational database schemas and data models using Prisma and PostgreSQL, ensuring data integrity\\
+  and maintainable application architecture}
+
+\resumebullet{Optimized complex SQL queries and implemented Redis-based locking mechanisms to prevent race\\
+  conditions and handle concurrency edge cases.}
+
+\resumebullet{Designed and implemented automated background processes, scheduled tasks, and data synchronization\\
+  workflows using 20+ cron jobs}
+
+\resumebullet{Implemented JWT, Redis, and cookie-based authentication and authorization systems, improving application\\
+  security and session management}
+
+\resumebullet{Built and maintained CI/CD pipelines to automate testing, deployment, and release workflows, reducing\\
+  manual deployment effort and improving delivery reliability.}
+
+\resumebullet{Built responsive frontend applications using React, TypeScript, Next.js, Mantine UI, Redux Toolkit, and\\
+  Tanstack Query, improving usability and development efficiency}
+
+\resumebullet{Led feature delivery, code reviews, technical estimation, and cross-team collaboration while mentoring\\
+  developers in Agile environments}
+
+\vspace{13pt}
+
+\experienceheader
+{Jr. Software Engineer}
+{TechHub, Save the Children International}
+{Jan 2023 -- Aug 2025}
+
+\resumebullet{Built a React-NestJS based SaaS CMS (\textit{SCI React Admin}) and successfully delivered 3+ client projects using the\\
+  platform.}
+
+\resumebullet{Developed and maintained RESTful APIs for 10+ applications using Node.js, improving backend performance\\
+  by 30\%.}
+
+\resumebullet{Built Node.js (Express) middlewares to optimize MongoDB queries, reducing response time by 40\%}
+
+\resumebullet{Improved application performance by 40--80\% by minimizing data fetching and implementing efficient state\\
+  management}
+
+\resumebullet{Developed interactive and reusable UI components with React, Vue, and Next in 7+ applications, improving\\
+  development efficiency and maintaining UI consistency}
+
+\resumebullet{Collaborated with the Data Analytics team to deliver 2+ PowerApps solutions that streamlined internal\\
+  processes and improved operational efficiency.}
+
+% ==========================================================
+% EDUCATION
+% ==========================================================
+
+\sectiontitle{EDUCATION}
+
+\textbf{BSc in Electronics and Communication Engineering (ECE)},
+\textit{National University}\par
+
+\secondaryline{\textbf{Academic and Co-curricular Activities}}
+
+\vspace{1pt}
+
+\resumebullet{Actively participated in inter-dept programming contests}
+
+\resumebullet{Successfully demonstrated and defended the final year project on Low-Cost Spin Coater}
+
+\resumebullet{Contributed to multiple outsourced web projects contractually}
+
+% ==========================================================
+% SKILLS
+% ==========================================================
+
+\sectiontitle{SKILLS}
+
+\skill{Language}{JavaScript, TypeScript, SQL, C++}
+
+\skill{Backend}{Node.js, NestJS, Express.js, REST APIs}
+
+\skill{Databases/ORMs}{PostgreSQL, MongoDB, Redis, Prisma, TypeORM}
+
+\skill{Frontend}{React, Next.js, Redux Toolkit, React Hook Form, Formik}
+
+\skill{Styling/UI}{Tailwind CSS, Material UI, Mantine UI, Shadcn UI, Bootstrap}
+
+\skill{DevOps/Cloud}{Docker, Git, CI/CD, AWS S3}
+
+\skill{Concepts}{Microservices, System Design, OOP}
+
+% ==========================================================
+% PAGE 2
+% ==========================================================
+
+\newpage
+
+\vspace*{-12pt}
+
+\bodyfont
+
+% ==========================================================
+% PROJECTS
+% ==========================================================
+
+\sectiontitle{PROJECTS}
+
+\projecttitle
+{Prism}
+{Field Force Automation Platform (FMCG, Bangladesh)}
+
+\projecttech{· NestJS · React · PostgreSQL · Prisma · Mantine UI · Redux Toolkit · Tanstack Query · ExcelJS}
+
+\vspace{7.64pt}
+
+\resumebullet{Delivered 10+ full-stack features and mobile APIs enabling real-time operations with cross-functional teams}
+
+\resumebullet{Developed and optimized backend services integrating NestJS, PostgreSQL and Redis for high-performance\\
+  data management.}
+
+\resumebullet{Generated materialized views and applied necessary schema tuning for analytics over billions of records}
+
+\resumebullet{Built cron-based scheduling systems for automated reporting, data sync, and backend workflows}
+
+\vspace{6pt}
+
+\projecttitle
+{SCI-React-Admin}
+{Custom CMS Platform (3+ projects delivered)}
+
+\projecttech{· NestJS · React · PostgreSQL · TypeORM · Material UI · React Hook Form · Redux Toolkit · RTK Query · Axios}
+
+\vspace{7.64pt}
+
+\resumebullet{Developed a full-stack CMS using React, NestJS, and PostgreSQL with modular architecture}
+
+\resumebullet{Designed and optimized database schema and queries using TypeORM for scalable data access}
+
+\resumebullet{Implemented role-based access control (RBAC) for secure content and user management}
+
+\resumebullet{Reduced redundant API calls and improved performance by up to 80\% through caching and optimization}
+
+% ==========================================================
+% COURSES
+% ==========================================================
+
+\sectiontitle{COURSES}
+
+\course
+{Introduction to DevOps}
+{Fundamentals of CI/CD, IaC, automated deployments, microservices, and DevOps culture.}
+
+\vspace{6pt}
+
+\course
+{Introduction to Containers w/ Docker, Kubernetes \& OpenShift}
+{Fundamentals of containerization, Kubernetes architecture, and YAML-based deployment of cloud-native\\
+  applications.}
+
+% ==========================================================
+% LANGUAGES
+% ==========================================================
+
+\sectiontitle{LANGUAGES}
+
+\textbf{English} --- Professional proficiency\par
+
+\textbf{Bangla} --- Native Proficiency\par
+
+% ==========================================================
+% CERTIFICATIONS
+% ==========================================================
+
+\sectiontitle{CERTIFICATIONS}
+
+\textbf{Duolingo English Test}
+(Score --- 125, CEFR Level --- B2--C1)
+
+\end{document}
