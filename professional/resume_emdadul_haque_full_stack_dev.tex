@@ -13,6 +13,8 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{fontawesome5}
+\usepackage{accsupp}
+\newcommand{\icon}[1]{\BeginAccSupp{method=escape,ActualText={}}#1\EndAccSupp{}}
 \usepackage[none]{hyphenat}
 
 \hyphenpenalty=10000
@@ -24,7 +26,9 @@
 \hypersetup{
   colorlinks=true,
   urlcolor=linkblue,
-  linkcolor=linkblue
+  linkcolor=linkblue,
+  pdfauthor={Emdadul Haque Apu},
+  pdftitle={Emdadul Haque Apu - Software Engineer Resume}
 }
 
 \pagestyle{empty}
@@ -151,6 +155,8 @@
 % DOCUMENT
 % ==========================================================
 
+\XeTeXgenerateactualtext=1
+
 \begin{document}
 
 \bodyfont
@@ -161,33 +167,33 @@
 
 {\fontsize{16pt}{19.2pt}\selectfont\bfseries
   Emdadul Haque Apu}
-\hspace{5pt}
+\hspace{6pt}{\fontsize{13pt}{15.6pt}\selectfont\color{gray}·}\hspace{6pt}
 {\fontsize{13pt}{15.6pt}\selectfont\itshape
   Software Engineer}
 
 \par\vspace{11pt}
 
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lll}
-  \mbox{\faEnvelope\hspace{6pt}
+  \mbox{\icon{\faEnvelope}\hspace{6pt}
     \href{mailto:emdadulhaqueofficial4@gmail.com}
     {emdadulhaqueofficial4@gmail.com}}
   &
-  \mbox{\faPhone\hspace{6pt}
+  \mbox{\icon{\faPhone}\hspace{6pt}
     \href{tel:+8801515294350}
     {+880151-5294350}}
   &
-  \mbox{\faMapMarker*\hspace{6pt}Dhaka, Bangladesh}
+  \mbox{\icon{\faMapMarker*}\hspace{6pt}Dhaka, Bangladesh}
   \\
   [9pt]
-  \mbox{\faLinkedin\hspace{6pt}
+  \mbox{\icon{\faLinkedin}\hspace{6pt}
     \href{https://linkedin.com/in/apu-emdad}
     {linkedin.com/in/apu-emdad}}
   &
-  \mbox{\faGithub\hspace{6pt}
+  \mbox{\icon{\faGithub}\hspace{6pt}
     \href{https://github.com/Apu-Emdad}
     {github.com/Apu-Emdad}}
   &
-  \mbox{\faDev\hspace{6pt}
+  \mbox{\icon{\faDev}\hspace{6pt}
     \href{https://dev.to/apu_emdad}
     {dev.to/apu\_emdad}}
 \end{tabular*}
@@ -211,21 +217,21 @@ Full-stack software engineer with 3+ years of experience turning complex busines
 {Manush AI Platform LTD}
 {Aug 2025 -- Present}
 
-\resumebullet{Designed, developed and delivered 50+ backend modules supporting large-scale enterprise workflows}
+\resumebullet{Designed, developed, and delivered 50+ backend modules supporting large-scale enterprise workflows}
 
-\resumebullet{Streamlined PostgreSQL performance through indexing, query tuning, and materialized views, reducing report generation times by up to 10x for datasets containing tens of millions of records}
+\resumebullet{Streamlined PostgreSQL performance through indexing, query tuning, and materialized views, reducing report generation times by up to 10x for datasets containing billions of records}
 
 \resumebullet{Designed relational database schemas and data models using Prisma and PostgreSQL, ensuring data integrity and maintainable application architecture}
 
-\resumebullet{Optimized complex SQL queries and implemented Redis-based locking mechanisms to prevent race conditions and handle concurrency edge cases.}
+\resumebullet{Optimized complex SQL queries and implemented Redis-based locking mechanisms to prevent race conditions and handle concurrency edge cases}
 
 \resumebullet{Planned and executed automated background processes, scheduled tasks, and data synchronization workflows using 20+ cron jobs}
 
 \resumebullet{Integrated JWT, Redis, and cookie-based authentication and authorization systems, improving application security and session management}
 
-\resumebullet{Configured and maintained CI/CD pipelines to automate testing, deployment, and release workflows, reducing manual deployment effort and improving delivery reliability.}
+\resumebullet{Configured and maintained CI/CD pipelines using GitHub Actions to automate testing, deployment, and release workflows, reducing manual deployment effort and improving delivery reliability}
 
-\resumebullet{Built responsive frontend applications using React, TypeScript, Next.js, Mantine UI, Redux Toolkit, and Tanstack Query, improving usability and development efficiency}
+\resumebullet{Built responsive frontend applications using React, TypeScript, Next.js, Mantine UI, Redux Toolkit, and TanStack Query, improving usability and development efficiency}
 
 \resumebullet{Led feature delivery, code reviews, technical estimation, and cross-team collaboration while mentoring developers in Agile environments}
 
@@ -236,17 +242,17 @@ Full-stack software engineer with 3+ years of experience turning complex busines
 {TechHub, Save the Children International}
 {Jan 2023 -- Aug 2025}
 
-\resumebullet{Built a React-NestJS based SaaS CMS (\textit{SCI React Admin}) and successfully shipped 3+ client projects using the platform.}
+\resumebullet{Built a React-NestJS-based SaaS CMS (\textit{SCI React Admin}) and successfully shipped 3+ client projects using the platform}
 
-\resumebullet{Implemented and maintained RESTful APIs for 10+ applications using Node.js, improving backend performance by 30\%.}
+\resumebullet{Implemented and maintained RESTful APIs for 10+ applications using Node.js, improving backend performance by 30\%}
 
 \resumebullet{Wrote Node.js (Express) middlewares to optimize MongoDB queries, reducing response time by 40\%}
 
 \resumebullet{Improved application performance by 40--80\% by minimizing data fetching and implementing efficient state management}
 
-\resumebullet{Developed interactive and reusable UI components with React, Vue, and Next in 7+ applications, improving development efficiency and maintaining UI consistency}
+\resumebullet{Developed interactive and reusable UI components with React, Vue, and Next.js in 7+ applications, improving development efficiency and maintaining UI consistency}
 
-\resumebullet{Collaborated with the Data Analytics team to deliver 2+ PowerApps solutions that streamlined internal processes and improved operational efficiency.}
+\resumebullet{Collaborated with the Data Analytics team to deliver 2+ PowerApps solutions that streamlined internal processes and improved operational efficiency}
 
 % ==========================================================
 % EDUCATION
@@ -255,7 +261,9 @@ Full-stack software engineer with 3+ years of experience turning complex busines
 \sectiontitle{EDUCATION}
 
 \textbf{BSc in Electronics and Communication Engineering (ECE)},
-\textit{National University}\par
+\textit{National University}%
+\hfill
+\mbox{Dec 2022}\par
 
 \secondaryline{\textbf{Academic and Co-curricular Activities}}
 
@@ -279,11 +287,11 @@ Full-stack software engineer with 3+ years of experience turning complex busines
 
 \skill{Databases/ORMs}{PostgreSQL, MongoDB, Redis, Prisma, TypeORM}
 
-\skill{Frontend}{React, Next.js, Redux Toolkit, React Hook Form, Formik}
+\skill{Frontend}{React, Vue, Next.js, Redux Toolkit, React Hook Form, Formik}
 
 \skill{Styling/UI}{Tailwind CSS, Material UI, Mantine UI, Shadcn UI, Bootstrap}
 
-\skill{DevOps/Cloud}{Docker, Git, CI/CD, AWS S3}
+\skill{DevOps/Cloud}{Docker, Git, CI/CD (GitHub Actions), AWS S3}
 
 \skill{Concepts}{Microservices, System Design, OOP}
 
@@ -307,13 +315,13 @@ Full-stack software engineer with 3+ years of experience turning complex busines
 {Prism}
 {Field Force Automation Platform (FMCG, Bangladesh)}
 
-\projecttech{· NestJS · React · PostgreSQL · Prisma · Mantine UI · Redux Toolkit · Tanstack Query · ExcelJS}
+\projecttech{· NestJS · React · PostgreSQL · Prisma · Mantine UI · Redux Toolkit · TanStack Query · ExcelJS}
 
 \vspace{7.64pt}
 
 \resumebullet{Shipped 10+ full-stack features and mobile APIs enabling real-time operations with cross-functional teams}
 
-\resumebullet{Developed and refined backend services integrating NestJS, PostgreSQL and Redis for high-performance data management.}
+\resumebullet{Developed and refined backend services integrating NestJS, PostgreSQL and Redis for high-performance data management}
 
 \resumebullet{Generated materialized views and applied necessary schema tuning for analytics over billions of records}
 
