@@ -1,2 +1,1 @@
-$pdf_mode = 5;   # 5 = xelatex (needed for fontspec)
-
+$pdf_mode = 4;   # 4 = lualatex (needed for fontspec; xelatex breaks ATS hyphen extraction)
