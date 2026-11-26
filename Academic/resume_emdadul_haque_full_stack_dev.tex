@@ -81,6 +81,9 @@
 % BULLET
 % ==========================================================
 
+\newlength{\bulletgap}
+\setlength{\bulletgap}{4pt}
+
 \newcommand{\resumebullet}[1]{%
   \begingroup
   \leftskip=\listindent
@@ -94,7 +97,7 @@
   }%
   #1\par
   \endgroup
-  \vspace{2pt}%
+  \vspace{\bulletgap}%
 }
 
 % ==========================================================
@@ -150,6 +153,7 @@
 
 \newcommand{\skill}[2]{%
   \textbf{#1} --- #2\par
+  \vspace{3pt}%
 }
 
 % ==========================================================
@@ -218,19 +222,24 @@ Proficient in programming, database systems, and technical problem-solving throu
 
 \resumebullet{Designed, developed, and delivered 50+ backend modules supporting large-scale enterprise workflows}
 
-\resumebullet{Streamlined PostgreSQL performance through indexing, query tuning, and materialized views, reducing report generation times by up to 20x for datasets containing billions of records}
+\resumebullet{Cut PostgreSQL query times by up to 20x on billions of records using indexes and materialized views}
 
 \resumebullet{Scaled heavy report generation with RabbitMQ background jobs and Redis caching, cutting report time from over 10 minutes to under 30 seconds}
+
+
+
+\resumebullet{Implemented Redis-based locking to prevent race conditions for 100+ concurrent users}
+
+\resumebullet{Built 20+ cron jobs automating background processing, scheduled tasks, and data synchronization}
+
+\resumebullet{Built a CX support console for data reconciliation issues, reducing developer escalations by 3x}
 
 \resumebullet{Led feature delivery, code reviews, and technical estimation in Agile sprints while mentoring developers}
 
 \resumebullet{Built GitHub Actions CI/CD pipelines automating unit testing, end-to-end testing, and deployment}
 
-\resumebullet{Optimized complex SQL queries and implemented Redis-based locking mechanisms to prevent race conditions and handle concurrency edge cases}
+\resumebullet{Designed Role-Based Access Control (RBAC) with JWT and cookie-based auth}
 
-\resumebullet{Built 20+ cron jobs automating background processing, scheduled reports, and data synchronization}
-
-\resumebullet{Implemented JWT and cookie-based authentication with Redis-backed sessions and role-based authorization}
 
 \resumebullet{Built responsive frontends with React, TypeScript, Next.js, Mantine UI, Redux Toolkit, and TanStack Query}
 
@@ -245,9 +254,11 @@ Proficient in programming, database systems, and technical problem-solving throu
 
 \resumebullet{Built a React-NestJS-based SaaS CMS (\textit{SCI React Admin}) and successfully shipped 3+ client projects using the platform}
 
-\resumebullet{Built and maintained Node.js (Express) REST APIs for 10+ applications, improving backend performance by 30\% and cutting MongoDB query response times by 40\% with custom middleware}
+\resumebullet{Built Express REST APIs for 10+ applications with MongoDB schema design and validation}
 
-\resumebullet{Improved application performance by 40--80\% by minimizing data fetching and implementing efficient state management}
+\resumebullet{Cut MongoDB query response times by 40\% using indexing and aggregation pipelines}
+
+\resumebullet{Improved app performance by 40--80\% through leaner data fetching and efficient state management}
 
 \resumebullet{Built reusable UI components with React, Vue, and Next.js across 7+ applications}
 
@@ -299,6 +310,7 @@ Proficient in programming, database systems, and technical problem-solving throu
 % ==========================================================
 
 \newpage
+\setlength{\bulletgap}{2pt}
 
 \vspace*{-12pt}
 
